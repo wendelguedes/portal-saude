@@ -13,7 +13,7 @@ body{
 }
 
 .logo {
-    background-image: url(/docs/imagens/logo.png);
+    background-image: url(https://github.com/wendelguedes/portal-saude/tree/master/docs/imagens/logo.png);
     float: left;
     padding: 35px;
     background-repeat: no-repeat;
