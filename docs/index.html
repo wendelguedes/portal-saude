@@ -1,97 +1,97 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+    <!DOCTYPE html>
+    <html lang="pt-BR">
 
-<head>
-    <title>Portal de Saúde</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fundamentos de Programação Front-End">
-    <meta name="keywords" content="HTML,CSS,JavaScript">
-    <meta name="author" content="Wendel Guedes">
-    <!-- Importação dos arquivos de estilos -->
-    <link rel="stylesheet" href="css/estilo.css" type="text/css">
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-</head>
+    <head>
+        <title>Portal de Saúde</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fundamentos de Programação Front-End">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="Wendel Guedes">
 
-<body>
+        <!-- Importação dos arquivos de estilos -->
+        <link rel="stylesheet" href="css/estilo.css" type="text/css">
 
-    <div class="topo">
-        <img src="imagens/logo.png"></div>
-        <h1>Portal de saúde</h1>
-        <h2>Elementos de dados usados para identificar indivíduos em um ambiente de assistência à saúde</h2>
-    </div>
-    
-    <div class="tab">
-        <button class="tablinks" onclick="abrirTab(event,'identificador')">Identificador</button>
-        <button class="tablinks" onclick="abrirTab(event,'nomeIndividuo')">Nome</button>
-        <button class="tablinks" onclick="abrirTab(event,'dadosDemograficos')">Dados Demográficos</button>
-        <button class="tablinks" onclick="abrirTab(event,'enderecoIndividuo')">Endereço</button>
-        <button class="tablinks" onclick="abrirTab(event,'comunicacaoEletronica')">Comunicações Eletrônicas</button>
-        <button class="tablinks" onclick="abrirTab(event,'vinculo')">Vínculo</button>
-    </div>
+        <div class="topo">
+            <div class="logo"></div>
+            <h1>Portal de Saúde</h1>
+        </div>
+    </head>
 
-    <div id="identificador" class="tabContent" style="display: block">
-        <fieldset>
-            <legend>Identificador do indivíduo</legend>
+    <body>
+        <div class="tab">
+            <button class="tablinks" onclick="abrirTab(event,'identificador')">Identificador do indivíduo</button>
+            <button class="tablinks" onclick="abrirTab(event,'nomeIndividuo')">Nome</button>
+            <button class="tablinks" onclick="abrirTab(event,'dadosDemograficos')">Dados Demográficos</button>
+            <button class="tablinks" onclick="abrirTab(event,'enderecoIndividuo')">Endereço</button>
+            <button class="tablinks" onclick="abrirTab(event,'comunicacaoEletronica')">Comunicações Eletrônicas</button>
+            <button class="tablinks" onclick="abrirTab(event,'vinculo')">Vínculo</button>
+        </div>
 
-            <label for="designacao">Designação do identificador do indivíduo</label>
-            <input type="text" id="designacao" name="designacao"></text><br />
+        <div class="container">
+                 <div id="identificador" class="tabContent" style="display: block">
 
-            <label for="areaIdentificado">Área do identificador do indivíduo</label>
-            <input type="text" id="areaIdentificado" name="areaIdentificado"></text>
-        </fieldset>
+                    <div class="formImput">
+                        First Name :<input type="text" name="fname" id="fname">
+                        Last Name :<input type="text" name="lname" id="lname">
 
-        <br />
+                        <button type="submit" onclick="addHtmlTableRow();">Adicionar</button>
+                        <button onclick="editHtmlTbleSelectedRow();">Editar</button>
+                        <button onclick="removeSelectedRow();">Remover</button>
+                    </div>
+                </div>
 
-        <ul type="square">
-            <li>identificador do indivíduo;</li>
-            <pre>
-                Designação do identificador do indivíduo Área do identificador do indivíduo Emissor do identificador do indivíduo Data da
-                emissão do documento Tipo do identificador do indivíduo Certidão de nascimento/casamento/divórcio (opcional)
-                Nome do cartório Livro Folha Termo Carteira de trabalho (opcional) Série Estado Título de eleitor (opcional)
-                Sessão eleitoral Zona eleitoral
+                <div id="nomeIndividuo" class="tabContent">
+                    <ul type="square">
+                        <li>nome do indivíduo;</li>
+                    </ul>
+                </div>
 
-            </pre>
-        </ul>
-    </div>
+                <div id="dadosDemograficos" class="tabContent">
+                    <ul type="square">
+                        <li>dados demográficos adicionais;</li>
+                    </ul>
+                </div>
 
-    <div id="nomeIndividuo" class="tabContent">
-        <ul type="square">
-            <li>nome do indivíduo;</li>
-        </ul>
-    </div>
+                <div id="enderecoIndividuo" class="tabContent">
+                    <ul type="square">
+                        <li>endereço do indivíduo;</li>
+                    </ul>
+                </div>
 
-    <div id="dadosDemograficos" class="tabContent">
-        <ul type="square">
-            <li>dados demográficos adicionais;</li>
-        </ul>
-    </div>
+                <div id="comunicacaoEletronica" class="tabContent">
+                    <ul type="square">
+                        <li>comunicações eletrônicas do indivíduo e</li>
+                    </ul>
+                </div>
 
-    <div id="enderecoIndividuo" class="tabContent">
-        <ul type="square">
-            <li>endereço do indivíduo;</li>
-        </ul>
-    </div>
+                <div id="vinculo" class="tabContent">
+                    <ul type="square">
+                        <li>vínculo do indivíduo.</li>
+                    </ul>
+                </div>
 
-    <div id="comunicacaoEletronica" class="tabContent">
-        <ul type="square">
-            <li>comunicações eletrônicas do indivíduo e</li>
-        </ul>
-    </div>
+                <h2>Pacientes Cadastrados</h2>
 
-    <div id="vinculo" class="tabContent">
-        <ul type="square">
-            <li>vínculo do indivíduo.</li>
-        </ul>
-    </div>
+                <div class="tab">
+                    <div style="overflow-x:auto;">
+                        <table id="table">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        </div>
 
-    <br/>
+        <br/>
 
-    <div class="rodape">
-        <a href="http://cursohtml.top/#html" target="_blank">Link para página do curso</a>
-    </div>
-    <!-- Importação dos arquivos javaScript-->
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
+        <div class="rodape">
+            <a href="http://cursohtml.top/#html" target="_blank">Link para página do curso</a>
+        </div>
+        <!-- Importação dos arquivos javaScript-->
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 
-</html>
+    </html>
