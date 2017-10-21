@@ -1,97 +1,97 @@
-    <!DOCTYPE html>
-    <html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-    <head>
-        <title>Portal de Saúde</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Fundamentos de Programação Front-End">
-        <meta name="keywords" content="HTML,CSS,JavaScript">
-        <meta name="author" content="Wendel Guedes">
+<head>
+    <title>Portal de Saúde</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fundamentos de Programação Front-End">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Wendel Guedes">
 
-        <!-- Importação dos arquivos de estilos -->
-        <link rel="stylesheet" href="css/estilo.css" type="text/css">
+    <!-- Importação dos arquivos de estilos -->
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
 
-        <div class="topo">
-            <div class="logo"></div>
-            <h1>Portal de Saúde</h1>
+    <div class="topo">
+        <div class="logo"></div>
+        <h1>Portal de Saúde</h1>
+    </div>
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="abrirTab(event,'identificador')">Identificador do indivíduo</button>
+        <button class="tablinks" onclick="abrirTab(event,'nomeIndividuo')">Nome</button>
+        <button class="tablinks" onclick="abrirTab(event,'dadosDemograficos')">Dados Demográficos</button>
+        <button class="tablinks" onclick="abrirTab(event,'enderecoIndividuo')">Endereço</button>
+        <button class="tablinks" onclick="abrirTab(event,'comunicacaoEletronica')">Comunicações Eletrônicas</button>
+        <button class="tablinks" onclick="abrirTab(event,'vinculo')">Vínculo</button>
+    </div>
+
+    <div class="container">
+        <div id="identificador" class="tabContent" style="display: block">
+
+            <div class="formImput">
+                Nome :<input type="text" name="fname" id="fname"> Sobrenome :<input type="text" name="lname" id="lname">
+
+                <button type="submit" onclick="addHtmlTableRow();" class="buttonVerde buttonGenral">Adicionar</button>
+                <button onclick="editHtmlTbleSelectedRow();" class="buttonAzul buttonGenral">Editar</button>
+                <button onclick="removeSelectedRow();" class="buttonVermelho buttonGenral">Remover</button>
+            </div>
         </div>
-    </head>
 
-    <body>
+        <div id="nomeIndividuo" class="tabContent">
+            <ul type="square">
+                <li>nome do indivíduo;</li>
+            </ul>
+        </div>
+
+        <div id="dadosDemograficos" class="tabContent">
+            <ul type="square">
+                <li>dados demográficos adicionais;</li>
+            </ul>
+        </div>
+
+        <div id="enderecoIndividuo" class="tabContent">
+            <ul type="square">
+                <li>endereço do indivíduo;</li>
+            </ul>
+        </div>
+
+        <div id="comunicacaoEletronica" class="tabContent">
+            <ul type="square">
+                <li>comunicações eletrônicas do indivíduo e</li>
+            </ul>
+        </div>
+
+        <div id="vinculo" class="tabContent">
+            <ul type="square">
+                <li>vínculo do indivíduo.</li>
+            </ul>
+        </div>
+
+
+        <h2 class="tituloH2">Pacientes Cadastrados</h2>
+
         <div class="tab">
-            <button class="tablinks" onclick="abrirTab(event,'identificador')">Identificador do indivíduo</button>
-            <button class="tablinks" onclick="abrirTab(event,'nomeIndividuo')">Nome</button>
-            <button class="tablinks" onclick="abrirTab(event,'dadosDemograficos')">Dados Demográficos</button>
-            <button class="tablinks" onclick="abrirTab(event,'enderecoIndividuo')">Endereço</button>
-            <button class="tablinks" onclick="abrirTab(event,'comunicacaoEletronica')">Comunicações Eletrônicas</button>
-            <button class="tablinks" onclick="abrirTab(event,'vinculo')">Vínculo</button>
+            <div style="overflow-x:auto;">
+                <table id="table">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                    </tr>
+                </table>
+            </div>
         </div>
+    </div>
 
-        <div class="container">
-                 <div id="identificador" class="tabContent" style="display: block">
+    <br/>
 
-                    <div class="formImput">
-                        First Name :<input type="text" name="fname" id="fname">
-                        Last Name :<input type="text" name="lname" id="lname">
+    <div class="rodape">
+        <a href="http://cursohtml.top/#html" target="_blank">Link para página do curso</a>
+    </div>
+    <!-- Importação dos arquivos javaScript-->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
 
-                        <button type="submit" onclick="addHtmlTableRow();">Adicionar</button>
-                        <button onclick="editHtmlTbleSelectedRow();">Editar</button>
-                        <button onclick="removeSelectedRow();">Remover</button>
-                    </div>
-                </div>
-
-                <div id="nomeIndividuo" class="tabContent">
-                    <ul type="square">
-                        <li>nome do indivíduo;</li>
-                    </ul>
-                </div>
-
-                <div id="dadosDemograficos" class="tabContent">
-                    <ul type="square">
-                        <li>dados demográficos adicionais;</li>
-                    </ul>
-                </div>
-
-                <div id="enderecoIndividuo" class="tabContent">
-                    <ul type="square">
-                        <li>endereço do indivíduo;</li>
-                    </ul>
-                </div>
-
-                <div id="comunicacaoEletronica" class="tabContent">
-                    <ul type="square">
-                        <li>comunicações eletrônicas do indivíduo e</li>
-                    </ul>
-                </div>
-
-                <div id="vinculo" class="tabContent">
-                    <ul type="square">
-                        <li>vínculo do indivíduo.</li>
-                    </ul>
-                </div>
-
-                <h2>Pacientes Cadastrados</h2>
-
-                <div class="tab">
-                    <div style="overflow-x:auto;">
-                        <table id="table">
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-        </div>
-
-        <br/>
-
-        <div class="rodape">
-            <a href="http://cursohtml.top/#html" target="_blank">Link para página do curso</a>
-        </div>
-        <!-- Importação dos arquivos javaScript-->
-        <script type="text/javascript" src="js/script.js"></script>
-    </body>
-
-    </html>
+</html>
