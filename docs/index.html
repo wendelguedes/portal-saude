@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <title>Portal de Saúde</title>
     <meta charset="UTF-8">
@@ -11,6 +12,7 @@
     <!-- Importação dos arquivos de estilos -->
     <link rel="stylesheet" href="css/estilo.css" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
@@ -34,11 +36,11 @@
         <button class="tablinks" onclick="abrirTab(event,'comunicacaoEletronica')">Comunicações Eletrônicas</button>
         <button class="tablinks" onclick="abrirTab(event,'vinculo')">Vínculo</button>
     </div>
-    
+
     <form class="pure-form pure-form-stacked">
-        <div id="identificador" class="tabContent" >
+        <div id="identificador" class="tabContent">
             <fieldset>
-                <legend>Identificado do Individuo</legend>
+                <legend>Informações do indentificador do individuo</legend>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-5">
                         <label for="state">Tipo do identificador</label>
@@ -48,7 +50,7 @@
                             <option value="22">Patologia</option>
                             <option value="23">Farmácia</option>
                         </select>
-                     </div>
+                    </div>
 
                     <div class="pure-u-1 pure-u-md-1-5">
                         <label for="state">Área geográfica</label>
@@ -59,10 +61,10 @@
                             </option>
                             <option value="4">Nacional</option>
                         </select>
-                     </div>
+                    </div>
 
                     <div class="pure-u-1 pure-u-md-1-5">
-                        <label for="first-name">Designaçao</label>
+                        <label for="first-name">Designação</label>
                         <input id="first-name" class="pure-u-23-24" type="text">
                     </div>
 
@@ -73,23 +75,23 @@
 
                     <div class="pure-u-1 pure-u-md-1-5">
                         <label for="email">Data</label>
-                        <input id="data-emissao" class="pure-u-23-24" type="date" required>
+                        <input id="data-emissao" class="pure-u-24-24" type="date" required>
                     </div>
                 </div>
             </fieldset>
-            
+
             <fieldset>
-                <legend>Certidao</legend>
-                 <div class="pure-g">
-                     <div class="pure-u-1 pure-u-md-1-5">
+                <legend>Certidão</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-5">
                         <label for="state">Tipo de certidão</label>
                         <select id="state" class="pure-u-23-24">
                             <option value="nascimento">Nascimento</option>
                             <option value="casamento">Casamento</option>
                             <option value="divorcio">Divórcio</option>
                         </select>
-                     </div>
-                     
+                    </div>
+
                     <div class="pure-u-1 pure-u-md-1-5">
                         <label for="first-name">Nome do cartório:</label>
                         <input id="first-name" class="pure-u-23-24" type="text">
@@ -104,25 +106,25 @@
                         <label for="email">Folha:</label>
                         <input id="data-emissao" class="pure-u-23-24" type="number" required>
                     </div>
-                     
+
                     <div class="pure-u-1 pure-u-md-1-5">
                         <label for="last-name">Termo:</label>
-                        <input id="last-name"  type="number" class="pure-u-23-24">
+                        <input id="last-name" type="number" class="pure-u-24-24">
                     </div>
                 </div>
             </fieldset>
-            
-             <fieldset>
+
+            <fieldset>
                 <legend>Carteira de trabalho</legend>
-                 <div class="pure-g">
+                <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2">
-                        <label for="first-name">Serie:</label>
+                        <label for="first-name">Série:</label>
                         <input id="first-name" class="pure-u-23-24" type="text">
                     </div>
 
                     <div class="pure-u-1 pure-u-md-1-2">
                         <label for="estados">Estado</label>
-                        <select id="estados" class="pure-u-23-24">
+                        <select id="estados" class="pure-u-24-24">
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
@@ -151,58 +153,101 @@
                             <option value="SE">Sergipe</option>
                             <option value="TO">Tocantins</option>
                         </select>
-                     </div>
+                    </div>
                 </div>
             </fieldset>
-            
+
             <fieldset>
                 <legend>Título de eleitor</legend>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2">
-                        <label for="first-name">Seçao:</label>
+                        <label for="first-name">Seção:</label>
                         <input id="first-name" class="pure-u-23-24" type="text">
                     </div>
-                     
+
                     <div class="pure-u-1 pure-u-md-1-2">
                         <label for="first-name">Zona:</label>
-                        <input id="first-name" class="pure-u-23-24" type="text">
+                        <input id="first-name" class="pure-u-24-24" type="text">
                     </div>
                 </div>
+                <br>
+                <button type="submit" class="pure-button">Adicionar Identificador</button>
+                <button class="pure-button pure-button-primary" onclick="abrirTab(event,'nomeIndividuo')">Próximo -> Nomes</button>
+
             </fieldset>
-            
+
+
+            <!-- Identificadores Adicionados -->
+            <fieldset>
+                <legend>Identificadores Adicionados</legend>
+
+                <table class="pure-table pure-table-horizontal">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tipo de identificador</th>
+                            <th>Designação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Maria do Carmo</td>
+                            <td>132132132</td>
+                            <td>
+                                <button class="pure-button">
+                                    <i class="fa fa-cog"></i>Remover
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maria do Carmo</td>
+                            <td>132132132</td>
+                            <td>
+                                <button class="pure-button">
+                                    <i class="fa fa-cog"></i>Remover
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
         </div>
 
         <div id="nomeIndividuo" class="tabContent">
-            
-             <fieldset>
+
+            <fieldset>
                 <legend>Nome</legend>
                 <div class="pure-g">
-                    
+
                     <div class="pure-u-1 pure-u-md-1-3">
                         <label for="first-name">Titulo:</label>
                         <input id="first-name" class="pure-u-23-24" type="text" oninput="nomeChanged()">
                     </div>
-                    
+
                     <div class="pure-u-1 pure-u-md-1-3">
                         <label for="first-name">Nome:</label>
                         <input id="first-name" class="pure-u-23-24" type="text" oninput="nomeChanged()">
                     </div>
-                     
+
                     <div class="pure-u-1 pure-u-md-1-3">
                         <label for="first-name">Sobrenome:</label>
-                        <input id="first-name" class="pure-u-23-24" type="text" oninput="nomeChanged()">
+                        <input id="first-name" class="pure-u-24-24" type="text" oninput="nomeChanged()">
                     </div>
-                     
+
                     <div class="pure-u-1 pure-u-md-1-3">
                         <label for="first-name">Sufixo:</label>
                         <input id="first-name" class="pure-u-23-24" type="text" oninput="nomeChanged()">
                     </div>
-                    
-                     <div class="pure-u-1 pure-u-md-2-3">
+
+                    <div class="pure-u-1 pure-u-md-2-3">
                         <label for="first-name">Nome Completo:</label>
-                        <input id="first-name" class="pure-u-23-24" type="text" oninput="nomeChanged()">
+                        <input id="first-name" class="pure-u-24-24" type="text" oninput="nomeChanged()">
                     </div>
-                    
+
                     <div class="pure-u-1 pure-u-md-1-2">
                         <label for="indicador-uso">Indicador de uso condicional</label>
                         <select id="indicador-uso" class="pure-u-23-24">
@@ -213,11 +258,11 @@
                             <option value="6">Requisito de privacidade/segurança especial</option>
                             <option value="9">Nome temporário</option>
                         </select>
-                     </div>
-                    
-                     <div class="pure-u-1 pure-u-md-1-2">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
                         <label for="uso">Grupo de utilização do nome</label>
-                        <select id="uso" class="pure-u-23-24">
+                        <select id="uso" class="pure-u-24-24">
                            <option value="1">Relatório</option>
                            <option value="2">Nome de recém-nascido</option>
                            <option value="3">Nome profissional ou comercial</option>
@@ -225,163 +270,202 @@
                            <option value="5">Nome registrado</option>
                            <option value="8">Outro nome</option>
                         </select>
-                     </div>
+                    </div>
                 </div>
             </fieldset>
-         
+
+            <button type="submit" class="pure-button">Adicionar Nome</button>
+            <button class="pure-button pure-button-primary" onclick="abrirTab(event,'dadosDemograficos')">Próximo -> Dados Demográficos</button>
+
+            <!-- Identificadores Adicionados -->
+            <fieldset>
+                <legend>Nomes Adicionados</legend>
+
+                <table class="pure-table pure-table-horizontal">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome completo</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Maria do Carmo</td>
+                            <td>
+                                <button class="pure-button">
+                                    <i class="fa fa-cog"></i>Remover
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Maria da abadia</td>
+                            <td>
+                                <button class="pure-button">
+                                    <i class="fa fa-cog"></i>Remover
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
         </div>
 
         <div id="dadosDemograficos" class="tabContent">
-            
-             <fieldset>
-                <legend>Dados Demograficos</legend>
+
+            <fieldset>
+                <legend>Filiação</legend>
                 <div class="pure-g">
-                    
+
                     <div class="pure-u-1 pure-u-md-1-2">
                         <label for="first-name">Nome da mae:</label>
                         <input id="first-name" class="pure-u-23-24" type="text">
                     </div>
-                    
+
                     <div class="pure-u-1 pure-u-md-1-2">
                         <label for="first-name">Nome do Pai:</label>
                         <input id="first-name" class="pure-u-24-24" type="text">
                     </div>
                 </div>
-            <fieldset>
+                <fieldset>
 
-            <fieldset>
-                <legend>Situação familiar</legend>
-                    <div class="pure-g">
-                                      
-                    <div class="pure-u-1 pure-u-md-1-1">
-                         <div class="field">
-                            <div class="control">
-                                <input class="checkbox" type="checkbox" value="1"><span>&nbsp;companheiro(a) e filho(s)</span><br>
-                                <input class="checkbox" type="checkbox" value="2"><span>&nbsp;companheiro(a) com laços conjugais e sem filhos</span><br>
-                                <input class="checkbox" type="checkbox" value="3"><span>&nbsp;companheiro(a), com filho(s) e/ou outro(s) familiar(es)</span><br>
-                                <input class="checkbox" type="checkbox" value="4"><span>&nbsp;familiar(es) sem companheiro(a)</span><br>
-                                <input class="checkbox" type="checkbox" value="5"><span>&nbsp;outra(s) pessoa(s) sem laços consanguíneos e/ou laços conjugais</span><br>
-                                <input class="checkbox" type="checkbox" value="6"><span>&nbsp;vive só</span><br>
+                    <fieldset>
+                        <legend>Situação familiar</legend>
+                        <div class="pure-g">
+
+                            <div class="pure-u-1 pure-u-md-1-1">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="checkbox" type="checkbox" value="1"><span>&nbsp;companheiro(a) e filho(s)</span><br>
+                                        <input class="checkbox" type="checkbox" value="2"><span>&nbsp;companheiro(a) com laços conjugais e sem filhos</span><br>
+                                        <input class="checkbox" type="checkbox" value="3"><span>&nbsp;companheiro(a), com filho(s) e/ou outro(s) familiar(es)</span><br>
+                                        <input class="checkbox" type="checkbox" value="4"><span>&nbsp;familiar(es) sem companheiro(a)</span><br>
+                                        <input class="checkbox" type="checkbox" value="5"><span>&nbsp;outra(s) pessoa(s) sem laços consanguíneos e/ou laços conjugais</span><br>
+                                        <input class="checkbox" type="checkbox" value="6"><span>&nbsp;vive só</span><br>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                     </div>
-                </div>
-            <fieldset>
-                 
-            <fieldset>
-                <legend>Informações do nascimento</legend>
-                 <div class="pure-g">
+                        <fieldset>
 
-                 <div class="pure-u-1 pure-u-md-1-4">
-                    <label for="first-name">Data de nascimento:</label>
-                    <input id="first-name" class="pure-u-23-24" type="date">
-                 </div>
-                 
-                 <div class="pure-u-1 pure-u-md-1-4">
-                    <label for="uso">Inicador de acurácia (DIA)</label>
-                    <select id="uso" class="pure-u-23-24">
-                       <option value="1">Acurado</option>
-                       <option value="2">Estimado</option>
-                       <option value="3">Desconhecido</option>
-                    </select>
-                 </div>
-                 
-                 <div class="pure-u-1 pure-u-md-1-4">
-                    <label for="uso">Inicador de acurácia (MES)</label>
-                    <select id="uso" class="pure-u-23-24">
-                       <option value="1">Acurado</option>
-                       <option value="2">Estimado</option>
-                       <option value="3">Desconhecido</option>
-                    </select>
-                 </div>
-                 
-                 <div class="pure-u-1 pure-u-md-1-4">
-                    <label for="uso">Inicador de acurácia (ANO)</label>
-                    <select id="uso" class="pure-u-24-24">
-                       <option value="1">Acurado</option>
-                       <option value="2">Estimado</option>
-                       <option value="3">Desconhecido</option>
-                    </select>
-                 </div>
-                </div>
-            </fieldset>
+                            <fieldset>
+                                <legend>Informações do nascimento</legend>
+                                <div class="pure-g">
 
-            <fieldset>
-                <legend>Informações do óbito:</legend>
-                 <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-4">
+                                        <label for="first-name">Data de nascimento:</label>
+                                        <input id="first-name" class="pure-u-23-24" type="date">
+                                    </div>
 
-                 <div class="pure-u-1 pure-u-md-1-5">
-                    <label for="first-name">Data de óbito:</label>
-                    <input id="first-name" class="pure-u-23-24" type="date">
-                 </div>
-                 
-                 <div class="pure-u-1 pure-u-md-1-5">
-                    <label for="uso">Inicador de acurácia (DIA)</label>
-                    <select id="uso" class="pure-u-23-24">
+                                    <div class="pure-u-1 pure-u-md-1-4">
+                                        <label for="uso">Inicador de acurácia (DIA)</label>
+                                        <select id="uso" class="pure-u-23-24">
                        <option value="1">Acurado</option>
                        <option value="2">Estimado</option>
                        <option value="3">Desconhecido</option>
                     </select>
-                 </div>
-                 
-                 <div class="pure-u-1 pure-u-md-1-5">
-                    <label for="uso">Inicador de acurácia (MES)</label>
-                    <select id="uso" class="pure-u-23-24">
+                                    </div>
+
+                                    <div class="pure-u-1 pure-u-md-1-4">
+                                        <label for="uso">Inicador de acurácia (MES)</label>
+                                        <select id="uso" class="pure-u-23-24">
                        <option value="1">Acurado</option>
                        <option value="2">Estimado</option>
                        <option value="3">Desconhecido</option>
                     </select>
-                 </div>
-                 
-                 <div class="pure-u-1 pure-u-md-1-5">
-                    <label for="uso">Inicador de acurácia (ANO)</label>
-                    <select id="uso" class="pure-u-23-24">
+                                    </div>
+
+                                    <div class="pure-u-1 pure-u-md-1-4">
+                                        <label for="uso">Inicador de acurácia (ANO)</label>
+                                        <select id="uso" class="pure-u-24-24">
                        <option value="1">Acurado</option>
                        <option value="2">Estimado</option>
                        <option value="3">Desconhecido</option>
                     </select>
-                 </div>
-                 <div class="pure-u-1 pure-u-md-1-5">
-                    <label for="uso">Fonte de notificação</label>
-                    <select id="uso" class="pure-u-24-24">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Informações do óbito:</legend>
+                                <div class="pure-g">
+
+                                    <div class="pure-u-1 pure-u-md-1-5">
+                                        <label for="first-name">Data de óbito:</label>
+                                        <input id="first-name" class="pure-u-23-24" type="date">
+                                    </div>
+
+                                    <div class="pure-u-1 pure-u-md-1-5">
+                                        <label for="uso">Inicador de acurácia (DIA)</label>
+                                        <select id="uso" class="pure-u-23-24">
+                       <option value="1">Acurado</option>
+                       <option value="2">Estimado</option>
+                       <option value="3">Desconhecido</option>
+                    </select>
+                                    </div>
+
+                                    <div class="pure-u-1 pure-u-md-1-5">
+                                        <label for="uso">Inicador de acurácia (MES)</label>
+                                        <select id="uso" class="pure-u-23-24">
+                       <option value="1">Acurado</option>
+                       <option value="2">Estimado</option>
+                       <option value="3">Desconhecido</option>
+                    </select>
+                                    </div>
+
+                                    <div class="pure-u-1 pure-u-md-1-5">
+                                        <label for="uso">Inicador de acurácia (ANO)</label>
+                                        <select id="uso" class="pure-u-23-24">
+                       <option value="1">Acurado</option>
+                       <option value="2">Estimado</option>
+                       <option value="3">Desconhecido</option>
+                    </select>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-5">
+                                        <label for="uso">Fonte de notificação</label>
+                                        <select id="uso" class="pure-u-24-24">
                        <option value="1">Cartório</option>
                        <option value="2"> Prestador de assistência à saúde</option>
                        <option value="3">Parente</option>
                        <option value="4">Outro</option>
                        <option value="9">Desconhecido</option>
                     </select>
-                 </div>
+                                    </div>
 
-                </div>
-            </fieldset>
+                                </div>
+                            </fieldset>
 
-             
-            <fieldset>
-                <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-5">
-                        <label for="uso">Raça</label>
-                        <select id="uso" class="pure-u-23-24">
+
+                            <fieldset>
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-4">
+                                        <label for="uso">Raça</label>
+                                        <select id="uso" class="pure-u-23-24">
                         <option value="1">Branca</option>
                         <option value="2"> Preta</option>
                         <option value="3">Parda</option>
                         <option value="4">Amarela</option>
                         <option value="9">indígena</option>
                         </select>
-                    </div>
-                              
-                    <div class="pure-u-1 pure-u-md-1-5">
-                        <label for="uso">Sexo</label>
-                        <select id="uso" class="pure-u-23-24">
+                                    </div>
+
+                                    <div class="pure-u-1 pure-u-md-1-4">
+                                        <label for="uso">Sexo</label>
+                                        <select id="uso" class="pure-u-23-24">
                         <option value="1">Masculino</option>
                         <option value="2">Feminino</option>
                         <option value="3">intersexo ou indeterminado</option>
                         <option value="9">não declarado</option>
                         </select>
-                    </div>
+                                    </div>
 
-                    <div class="pure-u-1 pure-u-md-1-5">
-                        <label for="uso">Situação familiar (convive com)</label>
-                        <select class="pure-u-23-24">
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <label for="uso">Situação familiar (convive com)</label>
+                                        <select class="pure-u-24-24">
                             <option value="1">companheiro(a) e filho(s)</option>
                             <option value="2">companheiro(a) com laços conjugais e
                                 sem filhos
@@ -396,30 +480,30 @@
                             </option>
                             <option value="6">Vive só</option>
                         </select>
-                    </div>
+                                    </div>
 
-                </div>
-            <fieldset>
+                                </div>
+                                <fieldset>
 
 
-            <fieldset>
-                <legend>Nacionalidade:</legend>
-                 <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-1-1">
-                        <div class="control" onchange="nacionalidade();">
-                            <label class="radio">
+                                    <fieldset>
+                                        <legend>Nacionalidade:</legend>
+                                        <div class="pure-g">
+                                            <div class="pure-u-1 pure-u-md-1-1">
+                                                <div class="control" onchange="nacionalidade();">
+                                                    <label class="radio">
                             <input id="brasileira" type="radio" name="nacionalidade"
                             value="1" checked>
                                 Brasileiro</label>
-                            <label class="radio">
+                                                    <label class="radio">
                             <input type="radio" name="nacionalidade" value="2">
                                 Estrangeiro</label>
-                        </div>
-                    </div>
-                
-                    <div class="pure-u-1 pure-u-md-1-1">
-                    <label for="uso">Estado de nascimento</label>
-                     <select id="estados" class="pure-u-1">
+                                                </div>
+                                            </div>
+
+                                            <div class="pure-u-1 pure-u-md-1-1">
+                                                <label for="uso">Estado de nascimento</label>
+                                                <select id="estados" class="pure-u-1">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AM">Amazonas</option>
@@ -446,24 +530,24 @@
                         <option value="SP">São Paulo</option>
                         <option value="TO">Tocantins</option>
                     </select>
-                </div>
+                                            </div>
 
-               <div class="pure-u-1 pure-u-md-1-2">
-                    <label for="uso">Pais de nascimento</label>
-                     <select id="estados" class="pure-u-23-24">
+                                            <div class="pure-u-1 pure-u-md-1-2">
+                                                <label for="uso">Pais de nascimento</label>
+                                                <select id="estados" class="pure-u-23-24">
                         <option value="BRASIL">Brasil</option>
                         <option value="PARAGUAI">Paraguai</option>
                     </select>
-                </div>
+                                            </div>
 
-                 <div class="pure-u-1 pure-u-md-1-2">
-                    <label for="first-name">Data de entrada no Brasil:</label>
-                    <input id="first-name" type="date" class="pure-u-24-24">
-                 </div>
+                                            <div class="pure-u-1 pure-u-md-1-2">
+                                                <label for="first-name">Data de entrada no Brasil:</label>
+                                                <input id="first-name" type="date" class="pure-u-24-24">
+                                            </div>
 
-                 <div class="pure-u-1 pure-u-md-1-2">
-                    <label for="uso">Pluralidade de nascimentos</label>
-                     <select id="estados" class="pure-u-23-24">
+                                            <div class="pure-u-1 pure-u-md-1-2">
+                                                <label for="uso">Pluralidade de nascimentos</label>
+                                                <select id="estados" class="pure-u-23-24">
                         <option value="1">Único</option>
                             <option value="2">Gêmeos</option>
                             <option value="3">Trigêmeos</option>
@@ -473,11 +557,11 @@
                             <option value="7">Outros</option>
                             <option value="9" selected>Não declarado</option>
                     </select>
-                </div>
+                                            </div>
 
-                <div class="pure-u-1 pure-u-md-1-2">
-                    <label for="uso">Ordem de nascimento</label>
-                     <select id="estados" class="pure-u-24-24">
+                                            <div class="pure-u-1 pure-u-md-1-2">
+                                                <label for="uso">Ordem de nascimento</label>
+                                                <select id="estados" class="pure-u-24-24">
                         <option value="1">único ou primeiro</option>
                             <option value="2">segundo</option>
                             <option value="3">terceiro</option>
@@ -487,98 +571,380 @@
                             <option value="7">outros</option>
                             <option value="9" selected>não declarado</option>
                     </select>
-                </div>
+                                            </div>
 
-                 <div class="pure-u-1 pure-u-md-1-1">
-                    <label for="first-name">Comentário de identificação:</label>
-                    <textarea class="pure-input-1"></textarea>
-                 </div>
-            </div>
+                                            <div class="pure-u-1 pure-u-md-1-1">
+                                                <label for="first-name">Comentário de identificação:</label>
+                                                <textarea class="pure-input-1"></textarea>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+            <button class="pure-button pure-button-primary" onclick="abrirTab(event,'enderecoIndividuo')">Próximo -> Endereços</button>
+
+
+        </div>
+
+        <div id="enderecoIndividuo" class="tabContent">
+            <fieldset>
+                <legend>Tipo de endereço:</legend>
+                <div class="pure-g">
+
+                    <div class="pure-u-1 pure-u-md-1-1">
+                        <select id="estados" class="pure-u-1">
+                        <option value="1">Comercial</option>
+                        <option value="2">Correio ou postal</option>
+                        <option value="3">Acomodação temporária</option>
+                        <option value="4">Residencial</option>
+                        <option value="8">Sem endereço fixo</option>
+                        <option value="9">Desconhecido/não declarado</option>
+                    </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Data Inicial do tipo de endereço</legend>
+                <div class="pure-g">
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Data inicial:</label>
+                        <input id="first-name" class="pure-u-23-24" type="date">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="uso">Inicador de acurácia (DIA)</label>
+                        <select id="uso" class="pure-u-23-24">
+                    <option value="1">Acurado</option>
+                    <option value="2">Estimado</option>
+                    <option value="3">Desconhecido</option>
+                </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="uso">Inicador de acurácia (MES)</label>
+                        <select id="uso" class="pure-u-23-24">
+                    <option value="1">Acurado</option>
+                    <option value="2">Estimado</option>
+                    <option value="3">Desconhecido</option>
+                </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="uso">Inicador de acurácia (ANO)</label>
+                        <select id="uso" class="pure-u-24-24">
+                    <option value="1">Acurado</option>
+                    <option value="2">Estimado</option>
+                    <option value="3">Desconhecido</option>
+                </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Data Final do tipo de endereço</legend>
+                <div class="pure-g">
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Data final:</label>
+                        <input id="first-name" class="pure-u-23-24" type="date">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="uso">Inicador de acurácia (DIA)</label>
+                        <select id="uso" class="pure-u-23-24">
+                    <option value="1">Acurado</option>
+                    <option value="2">Estimado</option>
+                    <option value="3">Desconhecido</option>
+                </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="uso">Inicador de acurácia (MES)</label>
+                        <select id="uso" class="pure-u-23-24">
+                    <option value="1">Acurado</option>
+                    <option value="2">Estimado</option>
+                    <option value="3">Desconhecido</option>
+                </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="uso">Inicador de acurácia (ANO)</label>
+                        <select id="uso" class="pure-u-24-24">
+                    <option value="1">Acurado</option>
+                    <option value="2">Estimado</option>
+                    <option value="3">Desconhecido</option>
+                </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pais</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-1">
+                        <select id="pais-nascimento" class="pure-u-24-24">
+                            <option value="BRASIL">Brasil</option>
+                            <option value="OUTRO">Outro</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes Brasil</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-1">
+                        <label for="uso">Estado</label>
+                        <select id="estados" class="pure-u-1">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PR">Paraná</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-1">
+                        <label for="uso">Município</label>
+                        <select id="estados" class="pure-u-1">
+                            <option value="AC">Trindade</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes Outro pais</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-1">
+                        <label for="uso">Pais</label>
+                        <select id="estados" class="pure-u-1">
+                            <option value="AC">Nome do pais</option>
+                            <option value="AL">Outro pais</option>
+                        </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">Estado:</label>
+                        <input id="first-name" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">Município:</label>
+                        <input id="first-name" class="pure-u-24-24" type="text">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalhes endereço</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">Caixa Postal:</label>
+                        <input id="first-name" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">CEP:</label>
+                        <input id="first-name" class="pure-u-24-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">Bairro:</label>
+                        <input id="first-name" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">Distruto:</label>
+                        <input id="first-name" class="pure-u-24-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">Linha 1:</label>
+                        <input id="first-name" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-2">
+                        <label for="first-name">Linha 2:</label>
+                        <input id="first-name" class="pure-u-24-24" type="text">
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <button class="pure-button pure-button-primary" onclick="abrirTab(event,'comunicacaoEletronica')">Próximo -> Comunicações Eletrônicas</button>
+        </div>
         </fieldset>
 
-    </div>       
+        </div>
 
-    <div id="enderecoIndividuo" class="tabContent">
-        <ul type="square">
-            <li>endereço do indivíduo;</li>
-        </ul>
-    </div>
+        <div id="comunicacaoEletronica" class="tabContent">
+            <fieldset>
+                <legend>Comunicações eletrônicas</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Meio:</label>
+                        <select id="pais-nascimento" class="pure-u-23-24">
+                            <option value="BRASIL">Telefone</option>
+                            <option value="OUTRO">Celeluar</option>
+                            <option value="OUTRO">Fax</option>
+                            <option value="OUTRO">Pager</option>
+                            <option value="OUTRO">E-mail</option>
+                            <option value="OUTRO">URL</option>
+                            <option value="OUTRO">Outro</option>
+                        </select>
+                    </div>
 
-    <div id="comunicacaoEletronica" class="tabContent">
-        <ul type="square">
-            <li>comunicações eletrônicas do indivíduo e</li>
-        </ul>
-    </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Telefone:</label>
+                        <input id="first-name" class="pure-u-23-24" type="text">
+                    </div>
 
-    <div id="vinculo" class="tabContent">
-        <ul type="square">
-            <li>vínculo do indivíduo.</li>
-        </ul>
-    </div>
-            
-            
-               
-                    <!- Botoes ->
-           <div>
-            <style scoped>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Preferência:</label>
+                        <select id="pais-nascimento" class="pure-u-23-24">
+                            <option value="B" selected>Preferência</option>
+                                <option value="D">Durante o dia</option>
+                                <option value="W">Finais de semana</option>
+                                <option value="A">Qualquer hora</option>
+                                <option value="E">Período noturno</option>
+                            </select>
+                    </div>
 
-                .button-success,
-                .button-error,
-                .button-warning,
-                .button-secondary {
-                    color: white;
-                    border-radius: 4px;
-                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-                }
-
-                .button-success {
-                    background: rgb(28, 184, 65); /* this is a green */
-                }
-
-                .button-error {
-                    background: rgb(202, 60, 60); /* this is a maroon */
-                }
-
-                .button-warning {
-                    background: rgb(223, 117, 20); /* this is an orange */
-                }
-
-                .button-secondary {
-                    background: rgb(66, 184, 221); /* this is a light blue */
-                }
-
-            </style>
-
-             <button type="submit" onclick="addHtmlTableRow();" class="button-success pure-button">Adicionar</button>
-
-            <button onclick="editHtmlTbleSelectedRow();" class="button-secondary pure-button">Editar</button>
-
-            <button onclick="removeSelectedRow();" class="button-error pure-button">Remover</button>
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Utilização:</label>
+                        <select id="pais-nascimento" class="pure-u-24-24">
+                                <option value="B" selected>Comercial</option>
+                                <option value="D">Pessoal</option>
+                                <option value="W">Comercial ou pessoal</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <button class="pure-button pure-button-primary" onclick="abrirTab(event,'vinculo')">Próximo -> Vínculos</button>
+        </div>
 
         </div>
-    </form>
+
+        <div id="vinculo" class="tabContent">
+            <fieldset>
+                <legend>Vínculos do indivíduo</legend>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Identificador:</label>
+                        <input id="first-name" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Utilização:</label>
+                        <select id="pais-nascimento" class="pure-u-23-24">
+                        <option value="7" selected>Avó materna</option>
+                        <option value="8">Avô materno</option>
+                        <option value="22">Cônjuge/companheiro(a)</option>
+                        <option value="23">Irmão</option>
+                        <option value="24">Irmã</option>
+                        <option value="25">Meio-irmão</option>
+                        <option value="26">Meio-irmã</option>
+                        <option value="27">Irmãos</option>
+                        <option value="28">Criança</option>
+                        <option value="29">Filha</option>
+                        <option value="36">Avó paterna</option>
+                        <option value="37">Avô paterno</option>
+                        <option value="38">Tio materno</option>
+                        <option value="40">Tio paterno</option>
+                        <option value="41">Tia paterna</option>
+                        <option value="189">Recém-nascido</option>
+                        <option value="254">Pais</option>
+                        <option value="262">Mãe adotiva</option>
+                        <option value="263">Pai adotivo</option>
+                        <option value="264">Responsável</option>
+                        <option value="265">Coabitante</option>
+                        <option value="939">Tia materna</option>
+                    </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Data Inicial:</label>
+                        <input id="first-name" class="pure-u-23-24" type="date">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-4">
+                        <label for="first-name">Data Final:</label>
+                        <input id="first-name" class="pure-u-24-24" type="date">
+                    </div>
+                </div>
+            </fieldset>
 
 
+            <!- Botoes ->
+            <div class="pure-g">
+                <div>
+                    <style scoped>
+                        .button-success,
+                        .button-error,
+                        .button-warning,
+                        .button-secondary {
+                            color: white;
+                            border-radius: 4px;
+                            margin: 5px;
+                            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+                        }
+                        
+                        .button-success {
+                            background: rgb(28, 184, 65);
+                            /* this is a green */
+                        }
+                        
+                        .button-error {
+                            background: rgb(202, 60, 60);
+                            /* this is a maroon */
+                        }
+                        
+                        .button-warning {
+                            background: rgb(223, 117, 20);
+                            /* this is an orange */
+                        }
+                        
+                        .button-secondary {
+                            background: rgb(66, 184, 221);
+                            /* this is a light blue */
+                        }
+                    </style>
 
-        <h2 class="tituloH2">Pacientes Cadastrados</h2>
+                    <button type="submit" onclick="addHtmlTableRow();" class="button-success pure-button">Concluir Cadastro</button>
+                    <button onclick="removeSelectedRow();" class="button-warning pure-button">Limpar Formulário</button>
+                    <button onclick="removeSelectedRow();" class="button-error pure-button">Remover Cadastro</button>
 
-        <div class="tab">
-            <div style="overflow-x:auto;">
-                <table id="table">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Sobrenome</th>
-                    </tr>
-                </table>
+                </div>
             </div>
         </div>
-    
-
-    <br/>
+    </form>
 
     <div class="rodape">
         <a href="http://cursohtml.top/#html" target="_blank">Link para página do curso</a>
     </div>
+
     <!-- Importação dos arquivos javaScript-->
     <script type="text/javascript" src="js/script.js"></script>
 </body>
