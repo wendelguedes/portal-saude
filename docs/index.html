@@ -233,7 +233,6 @@
 
         <div id="dadosDemograficos" class="tabContent">
             
-            
              <fieldset>
                 <legend>Dados Demograficos</legend>
                 <div class="pure-g">
@@ -245,12 +244,17 @@
                     
                     <div class="pure-u-1 pure-u-md-1-2">
                         <label for="first-name">Nome do Pai:</label>
-                        <input id="first-name" class="pure-u-23-24" type="text">
+                        <input id="first-name" class="pure-u-24-24" type="text">
                     </div>
+                </div>
+            <fieldset>
+
+            <fieldset>
+                <legend>Situação familiar</legend>
+                    <div class="pure-g">
                                       
                     <div class="pure-u-1 pure-u-md-1-1">
                          <div class="field">
-                            <label class="label">Situação familiar (convive com)</label>
                             <div class="control">
                                 <input class="checkbox" type="checkbox" value="1"><span>&nbsp;companheiro(a) e filho(s)</span><br>
                                 <input class="checkbox" type="checkbox" value="2"><span>&nbsp;companheiro(a) com laços conjugais e sem filhos</span><br>
@@ -262,10 +266,12 @@
                         </div>
                      </div>
                 </div>
+            <fieldset>
                  
-                <fieldset>
-                    <legend>Identificado do Individuo</legend>
-                 
+            <fieldset>
+                <legend>Informações do nascimento</legend>
+                 <div class="pure-g">
+
                  <div class="pure-u-1 pure-u-md-1-4">
                     <label for="first-name">Data de nascimento:</label>
                     <input id="first-name" class="pure-u-23-24" type="date">
@@ -291,6 +297,26 @@
                  
                  <div class="pure-u-1 pure-u-md-1-4">
                     <label for="uso">Inicador de acurácia (ANO)</label>
+                    <select id="uso" class="pure-u-24-24">
+                       <option value="1">Acurado</option>
+                       <option value="2">Estimado</option>
+                       <option value="3">Desconhecido</option>
+                    </select>
+                 </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações do óbito:</legend>
+                 <div class="pure-g">
+
+                 <div class="pure-u-1 pure-u-md-1-5">
+                    <label for="first-name">Data de óbito:</label>
+                    <input id="first-name" class="pure-u-23-24" type="date">
+                 </div>
+                 
+                 <div class="pure-u-1 pure-u-md-1-5">
+                    <label for="uso">Inicador de acurácia (DIA)</label>
                     <select id="uso" class="pure-u-23-24">
                        <option value="1">Acurado</option>
                        <option value="2">Estimado</option>
@@ -298,217 +324,147 @@
                     </select>
                  </div>
                  
+                 <div class="pure-u-1 pure-u-md-1-5">
+                    <label for="uso">Inicador de acurácia (MES)</label>
+                    <select id="uso" class="pure-u-23-24">
+                       <option value="1">Acurado</option>
+                       <option value="2">Estimado</option>
+                       <option value="3">Desconhecido</option>
+                    </select>
+                 </div>
+                 
+                 <div class="pure-u-1 pure-u-md-1-5">
+                    <label for="uso">Inicador de acurácia (ANO)</label>
+                    <select id="uso" class="pure-u-23-24">
+                       <option value="1">Acurado</option>
+                       <option value="2">Estimado</option>
+                       <option value="3">Desconhecido</option>
+                    </select>
+                 </div>
+                 <div class="pure-u-1 pure-u-md-1-5">
+                    <label for="uso">Fonte de notificação</label>
+                    <select id="uso" class="pure-u-24-24">
+                       <option value="1">Cartório</option>
+                       <option value="2"> Prestador de assistência à saúde</option>
+                       <option value="3">Parente</option>
+                       <option value="4">Outro</option>
+                       <option value="9">Desconhecido</option>
+                    </select>
+                 </div>
+
+                </div>
             </fieldset>
 
-            <!-- óbito -->
-            <div class="box">
-                <div class="field">
-                    <label class="label">Óbito</label>
-                    <input type="date">
-                </div>
-                <div class="field">
-                    <label class="label">Inicador de acurácia</label> Dia:
-                    <label class="radio"><input class="radio"
-                                                type="radio"
-                                                name="dia"
-                                                value="A">
-                        Acurado</label>
-                    <label class="radio"><input class="radio" type="radio"
-                                                name="dia" value="E">
-                        Estimado</label>
-                    <label class="radio"><input class="radio" type="radio"
-                                                name="dia" value="U">
-                        Desconhecido</label><br> Mês: <label
-                        class="radio"><input class="radio" type="radio"
-                                             name="dia"
-                                             value="A">
-                    Acurado</label>
-                    <label class="radio"><input class="radio" type="radio"
-                                                name="dia" value="E">
-                        Estimado</label>
-                    <label class="radio"><input class="radio" type="radio"
-                                                name="dia" value="U">
-                        Desconhecido</label><br> Ano: <label
-                        class="radio"><input class="radio" type="radio"
-                                             name="dia"
-                                             value="A">
-                    Acurado</label>
-                    <label class="radio"><input class="radio" type="radio"
-                                                name="dia" value="E">
-                        Estimado</label>
-                    <label class="radio"><input class="radio" type="radio"
-                                                name="dia" value="U">
-                        Desconhecido</label>
-                </div>
-                <div class="field">
-                    <label class="label">Fonte de notificação</label>
-                    <div class="control">
-                        <label class="radio"><input class="radio" type="radio"
-                                                    name="dia" value="1">
-                            Cartório</label>
-                        <label class="radio"><input class="radio" type="radio"
-                                                    name="dia" value="2">
-                            Prestador de assistência à saúde</label>
-                        <label class="radio"><input class="radio" type="radio"
-                                                    name="dia" value="3">
-                            Parente</label>
-                        <label class="radio"><input class="radio" type="radio"
-                                                    name="dia" value="4">
-                            Outro</label>
-                        <label class="radio"><input class="radio" type="radio"
-                                                    name="dia" value="9"
-                                                    checked>
-                            Desconhecido</label>
+             
+            <fieldset>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-5">
+                        <label for="uso">Raça</label>
+                        <select id="uso" class="pure-u-23-24">
+                        <option value="1">Branca</option>
+                        <option value="2"> Preta</option>
+                        <option value="3">Parda</option>
+                        <option value="4">Amarela</option>
+                        <option value="9">indígena</option>
+                        </select>
                     </div>
+                              
+                    <div class="pure-u-1 pure-u-md-1-5">
+                        <label for="uso">Sexo</label>
+                        <select id="uso" class="pure-u-23-24">
+                        <option value="1">Masculino</option>
+                        <option value="2">Feminino</option>
+                        <option value="3">intersexo ou indeterminado</option>
+                        <option value="9">não declarado</option>
+                        </select>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-5">
+                        <label for="uso">Situação familiar (convive com)</label>
+                        <select class="pure-u-23-24">
+                            <option value="1">companheiro(a) e filho(s)</option>
+                            <option value="2">companheiro(a) com laços conjugais e
+                                sem filhos
+                            </option>
+                            <option value="3">companheiro(a), com filho(s) e/ou
+                                outro(s) familiares.
+                            </option>
+                            <option value="4">familiar(es) sem companheiro(a)
+                            </option>
+                            <option value="5">outra(s) pessoa(s), sem laços
+                                consanguíneos e/ou laços conjugais
+                            </option>
+                            <option value="6">Vive só</option>
+                        </select>
+                    </div>
+
                 </div>
-            </div>
+            <fieldset>
 
-            <div class="field">
-                <label class="label">Raça/cor</label>
-                <div class="control">
-                    <input class="checkbox" type="checkbox" value="1"><span>&nbsp;branca</span><br>
-                    <input class="checkbox" type="checkbox" value="2"><span>&nbsp;preta</span><br>
-                    <input class="checkbox" type="checkbox" value="3"><span>&nbsp;parda</span><br>
-                    <input class="checkbox" type="checkbox" value="4"><span>&nbsp;amarela</span><br>
-                    <input class="checkbox" type="checkbox" value="5"><span>&nbsp;indígena</span>
-                </div>
-            </div>
 
-        </div>
-
-        <div class="box">
-            <div class="field">
-                <label class="label">Sexo</label>
-                <div class="control">
-                    <label class="radio">
-                        <input class="radio" type="radio" name="sexo" value="1">
-                        masculino (M)
-                    </label><br>
-                    <label class="radio">
-                        <input class="radio" type="radio" name="sexo" value="2">
-                        feminino (F)
-                    </label><br>
-                    <label class="radio">
-                        <input class="radio" type="radio" name="sexo" value="3">
-                        intersexo ou indeterminado (I)</label><br>
-                    <label class="radio">
-                        <input class="radio" type="radio" name="sexo" value="9"
-                               checked>
-                        não declarado (U)</label>
-                </div>
-            </div>
-        </div>
-
-        <!-- situação familiar -->
-        <div class="box">
-            <div class="field">
-                <label class="label">Situação familiar (convive com)</label>
-                <div class="select">
-                    <select>
-                        <option value="1">companheiro(a) e filho(s)</option>
-                        <option value="2">companheiro(a) com laços conjugais e
-                            sem filhos
-                        </option>
-                        <option value="3">companheiro(a), com filho(s) e/ou
-                            outro(s) familiares.
-                        </option>
-                        <option value="4">familiar(es) sem companheiro(a)
-                        </option>
-                        <option value="5">outra(s) pessoa(s), sem laços
-                            consanguíneos e/ou laços conjugais
-                        </option>
-                        <option value="6">Vive só</option>
+            <fieldset>
+                <legend>Nacionalidade:</legend>
+                 <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-1">
+                        <div class="control" onchange="nacionalidade();">
+                            <label class="radio">
+                            <input id="brasileira" type="radio" name="nacionalidade"
+                            value="1" checked>
+                                Brasileiro</label>
+                            <label class="radio">
+                            <input type="radio" name="nacionalidade" value="2">
+                                Estrangeiro</label>
+                        </div>
+                    </div>
+                
+                    <div class="pure-u-1 pure-u-md-1-1">
+                    <label for="uso">Estado de nascimento</label>
+                     <select id="estados" class="pure-u-1">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="PR">Paraná</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="TO">Tocantins</option>
                     </select>
                 </div>
-            </div>
-        </div>
 
-        <!-- nacionalidade -->
-        <div class="box">
-            <label class="label">Nacionalidade</label>
-            <div class="control" onchange="nacionalidade();">
-                <label class="radio">
-                    <input id="brasileira" type="radio" name="nacionalidade"
-                           value="1" checked>
-                    Brasileiro</label>
-                <label class="radio">
-                    <input type="radio" name="nacionalidade" value="2">
-                    Estrangeiro</label>
-            </div>
-
-            <div id="db" class="box">
-                <div class="field">
-                    <div class="control">
-                        <label class="label">Estado de nascimento</label>
-                        <div class="select is-small">
-                            <select id="estados"
-                                    onchange="atualizaMunicipios()">
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="PR">Paraná</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="TO">Tocantins</option>
-                            </select>
-                        </div>
-                    </div>
+               <div class="pure-u-1 pure-u-md-1-2">
+                    <label for="uso">Pais de nascimento</label>
+                     <select id="estados" class="pure-u-23-24">
+                        <option value="BRASIL">Brasil</option>
+                        <option value="PARAGUAI">Paraguai</option>
+                    </select>
                 </div>
-                <div class="field">
-                    <div class="control">
-                        <label id="municipio-label" class="label"></label>
-                        <div class="select is-small">
-                            <select id="municipios">
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div id="de" class="box">
-                <div class="field">
-                    <div class="control">
-                        <label class="label">País de nascimento</label>
-                        <div class="select is-small">
-                            <select id="paises">
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Data de entrada no Brasil</label>
-                    <input type="date">
-                </div>
-            </div>
+                 <div class="pure-u-1 pure-u-md-1-2">
+                    <label for="first-name">Data de entrada no Brasil:</label>
+                    <input id="first-name" type="date" class="pure-u-24-24">
+                 </div>
 
-        </div>
-
-        <!-- pluralidade de nascimentos -->
-        <div class="box">
-            <div class="field">
-                <div class="control">
-                    <label class="label">Pluralidade de nascimentos</label>
-                    <div class="select is-small">
-                        <select>
-                            <option value="1">Único</option>
+                 <div class="pure-u-1 pure-u-md-1-2">
+                    <label for="uso">Pluralidade de nascimentos</label>
+                     <select id="estados" class="pure-u-23-24">
+                        <option value="1">Único</option>
                             <option value="2">Gêmeos</option>
                             <option value="3">Trigêmeos</option>
                             <option value="4">Quádruplos</option>
@@ -516,20 +472,13 @@
                             <option value="6">Sêxtuplos</option>
                             <option value="7">Outros</option>
                             <option value="9" selected>Não declarado</option>
-                        </select>
-                    </div>
+                    </select>
                 </div>
-            </div>
-        </div>
 
-        <!-- ordem de nascimento -->
-        <div class="box">
-            <div class="field">
-                <div class="control">
-                    <label class="label">Ordem de nascimento</label>
-                    <div class="select is-small">
-                        <select>
-                            <option value="1">único ou primeiro</option>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <label for="uso">Ordem de nascimento</label>
+                     <select id="estados" class="pure-u-24-24">
+                        <option value="1">único ou primeiro</option>
                             <option value="2">segundo</option>
                             <option value="3">terceiro</option>
                             <option value="4">quarto</option>
@@ -537,42 +486,35 @@
                             <option value="6">sexto</option>
                             <option value="7">outros</option>
                             <option value="9" selected>não declarado</option>
-                        </select>
-                    </div>
+                    </select>
                 </div>
-            </div>
-        </div>
 
-        <!-- comentário de identificação -->
-        <div class="box">
-            <div class="field">
-                <div class="control">
-                    <label class="label">Comentário de identificação</label>
-                    <textarea class="textarea is-small"
-                              placeholder="exemplo: dois pacientes com o mesmo nome. Não é o mesmo que 123456"></textarea>
-                </div>
+                 <div class="pure-u-1 pure-u-md-1-1">
+                    <label for="first-name">Comentário de identificação:</label>
+                    <textarea class="pure-input-1"></textarea>
+                 </div>
             </div>
-        </div>
+        </fieldset>
+
+    </div>       
+
+    <div id="enderecoIndividuo" class="tabContent">
+        <ul type="square">
+            <li>endereço do indivíduo;</li>
+        </ul>
     </div>
-        </div>
 
-        <div id="enderecoIndividuo" class="tabContent">
-            <ul type="square">
-                <li>endereço do indivíduo;</li>
-            </ul>
-        </div>
+    <div id="comunicacaoEletronica" class="tabContent">
+        <ul type="square">
+            <li>comunicações eletrônicas do indivíduo e</li>
+        </ul>
+    </div>
 
-        <div id="comunicacaoEletronica" class="tabContent">
-            <ul type="square">
-                <li>comunicações eletrônicas do indivíduo e</li>
-            </ul>
-        </div>
-
-        <div id="vinculo" class="tabContent">
-            <ul type="square">
-                <li>vínculo do indivíduo.</li>
-            </ul>
-        </div>
+    <div id="vinculo" class="tabContent">
+        <ul type="square">
+            <li>vínculo do indivíduo.</li>
+        </ul>
+    </div>
             
             
                
